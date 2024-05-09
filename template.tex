@@ -1,0 +1,184 @@
+\documentclass[UTF8,a4paper,12pt]{ctexart}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage[section]{placeins}
+\usepackage{titlesec}
+\usepackage{setspace}
+\linespread{1.375}
+\setmainfont{Times New Roman}
+\ctexset{
+	section={
+		name={\heiti 第,章},
+		number=\heiti \chinese{section},
+	}
+}
+%这段注释是留给画流程图用的
+%\usetikzlibrary{shapes,arrows}
+%\tikzstyle{startstop} = [rectangle,rounded corners, minimum width=3cm,minimum height=1cm,text centered,draw=black, fill=red!10]
+%\tikzstyle{io} = [trapezium, trapezium left angle = 70,trapezium right angle=110,minimum width=3cm,minimum height=1cm,text centered,draw=black, fill=green!10]
+%\tikzstyle{process} = [rectangle,minimum width=3cm,minimum height=1cm,text centered,draw=black, fill=blue!10]
+%\tikzstyle{processsmall} = [rectangle,minimum width=3cm,minimum height=1cm,text centered,text width=3cm,draw=black, fill=blue!10]
+%\tikzstyle{decision} = [diamond,minimum width=3cm,minimum height=1cm,text centered, text width=3cm,draw=black, fill=orange!10]
+%\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\fontsize{9pt}{\baselineskip} 安徽农业大学本科毕业论文（设计）} 
+\fancyfoot[C]{\thepage} 
+\geometry{left=3cm,right=2.5cm,top=3cm,bottom=2.5cm}
+%没有使用标题生成，有点小问题好像
+%\title{\textbf{\fontsize{36pt}{\baselineskip}本科生毕业论文（设计）\vspace{-2cm}}}
+%\date{}
+\begin{document}
+	\vspace{5cm}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.8\textwidth]{pic/校徽.pdf}
+		\label{fig0}
+	\end{figure}
+	%\maketitle
+	\textbf{\fontsize{36pt}{\baselineskip}本科生毕业论文（设计）}
+	\vspace{3cm}
+	\begin{table}[!h]
+		\centering
+		\renewcommand\arraystretch{1.5}
+		\setlength\tabcolsep{20pt}
+		\begin{tabular}{cc}
+			%自己补充关键内容
+			\textbf{\heiti 题　　目:} & \underline{　　　　基于1234567890的管理系统　　　　}  \\ 
+			\textbf{\heiti 姓　　名: }& \underline{　　　　　　　　　　　　　　　　　　　　　　　　}  \\ 
+			\textbf{\heiti 学　　号: }& \underline{　　　　　　　　　　　20123456　　　　　　　　　}  \\ 
+			\textbf{\heiti 学　　院: }&  \underline{　　　　　　　　信息与人工智能学院　　　　　　　}  \\ 
+			\textbf{\heiti 专　　业: }& \underline{　　　　　　　　计算机科学与技术　　　　　　　}  \\
+		\end{tabular}
+	\end{table}
+	\vspace{-0.75cm}
+	\begin{table}[!h]
+		\setlength\tabcolsep{19.2pt}
+		\centering
+		\begin{tabular}{cccc}
+			\textbf{\heiti 指导教师：}&\underline{　　　　　　　}&\textbf{\heiti 职　　称:}&\underline{　　　　　　　 }\\
+		\end{tabular}
+	\end{table}
+	\vspace{4cm} 
+	\begin{table}[!h]
+		\renewcommand\arraystretch{1.8}
+		\setlength\tabcolsep{16pt}
+		\centering
+		\begin{tabular}{c}
+			\textbf{\fontsize{16pt}{\baselineskip}\heiti 中　国　•　合　肥 }\\
+			\textbf{\fontsize{16pt}{\baselineskip}\heiti 二　〇　二　四　年　五　月} \\
+			%　0　0　日
+		\end{tabular}
+	\end{table}
+	%\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 中　国　•　合　肥}}
+	%\vspace{1cm}
+	%\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 2　0　2　4　年　5　月　0　0　日}}
+	\thispagestyle{empty}
+	\newpage　
+	\vspace{1cm} \par \textbf{\fontsize{18pt}{\baselineskip}\heiti 安徽农业大学本科生毕业论文（设计）原创性声明}
+	\vspace{1cm} \par 本人郑重声明：所呈交的毕业论文（设计），是本人在导师的指导下，独立进行研究工作所取得的成果。除文中已经注明引用的内容外，本论文不包含任何其他个人或集体已经发表或撰写过的作品成果。对本文的研究做出重要贡献的个人和集体，均已在文中以明确方式标明。本人完全意识到本声明的法律结果由本人承担。
+	\vspace{1cm} \par 论文作者签名：　　　　　　　　　　　日期：　　　　年　　月　　日
+	\vspace{6cm} \par \textbf{\fontsize{18pt}{\baselineskip}\heiti  安徽农业大学本科生毕业论文（设计）使用授权声明}
+	\vspace{1cm} \par 本学位论文作者完全了解学校有关保留、使用毕业论文（设计）的规定，同意学校保留并向国家有关部门或机构送交论文的复印件和电子版，允许论文被查阅和借阅。本人授权安徽农业大学教务处可以将本毕业论文（设计）的全部或部分内容编入有关数据库进行检索，可以采用影印、缩印或扫描等复制手段保存和汇编毕业论文（设计）。
+	\vspace{1cm} \par 论文作者签名：　　　　　　　　　　　导师签名：
+	\thispagestyle{empty}
+	
+	\newpage
+	\begin{spacing}{1.2}
+	%目录上面的行间距自己调整一下，尽量不要超过一页目录，否则要设置第二页页面格式为empty。
+	\tableofcontents
+	\end{spacing}
+	\thispagestyle{empty}
+	
+	\newpage
+	\addcontentsline{toc}{section}{\heiti 摘　　要} \tolerance=500
+	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 摘　　要}}
+	\vspace{0.4cm}
+	%距离这个东西自己看着调整，我觉得这样调整后好看
+	111111
+	\vspace{0.2cm}
+	\par \textbf{\fontsize{14pt}{\baselineskip}\heiti 关键词:　}123
+	\setcounter{page}{1}
+	\pagenumbering{Roman}
+	\newpage
+	\addcontentsline{toc}{section}{ABSTRACT}\tolerance=500
+	\centerline{\textbf{\fontsize{16pt}{\baselineskip}ABSTRACT}}
+	\vspace{0.4cm}
+	111111英文摘要找GPT4帮你翻译
+	\vspace{0.4cm}
+	\par \textbf{\fontsize{14pt}{\baselineskip}KEYWORDS:　}123
+	\newpage
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+	\section{\fontsize{16pt}{\baselineskip}\heiti 绪论}
+	\subsection{\fontsize{14pt}{\baselineskip}\heiti 研究背景及意义}
+	下面的东西自己修改，标题也是，我这是示例标题
+	
+	\subsection{\fontsize{14pt}{\baselineskip}\heiti 论文的主要研究内容及其组织结构}
+	1111111
+	
+	\section{\fontsize{16pt}{\baselineskip}\heiti 理论基础}
+	
+	\subsection{\fontsize{14pt}{\baselineskip}\heiti 某理论基础}
+	1111111
+	
+	\subsubsection{\fontsize{13pt}{\baselineskip}\heiti 某理论基础详细介绍}
+	1111111
+	
+
+	\section{\fontsize{16pt}{\baselineskip}\heiti 技术介绍}
+	\subsection{\fontsize{14pt}{\baselineskip}\heiti 某技术详细介绍}
+	6666666
+	
+	\section{\fontsize{16pt}{\baselineskip}\heiti 架构实现}
+	\subsection{\fontsize{14pt}{\baselineskip}\heiti 某架构详细实现}
+	网恋被骗8000块
+
+	\section{\fontsize{16pt}{\baselineskip}\heiti 总结与展望}
+	哎，安农专给的word模版就是一坨答辩，按下tab的瞬间整个word都变了
+	
+	
+	
+	\newpage
+	\addcontentsline{toc}{section}{\heiti 参考文献} \tolerance=500
+	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 参考文献}}
+	%我这个参考文献的模版好像有点问题，但是也不是不能用
+	\vspace{-0.5cm} 
+	\renewcommand{\refname}{\leftline{Reference}}
+	\begin{thebibliography}{}
+		\vspace{-1cm} 
+		\bibitem{Ref1}
+		安徽农业大学信息与人工智能学院荣誉出品：D
+		
+	\end{thebibliography}
+	
+	\newpage
+	\addcontentsline{toc}{section}{\heiti 致　　谢} \tolerance=500
+	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 致　　谢}}
+	\vspace{0.4cm}
+	我测，不会真有人用农专发的唐氏模版吧
+	\newpage
+	\pagestyle{empty}
+	\addcontentsline{toc}{section}{\heiti 附　　录} \tolerance=500
+	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 附　　录}}
+	\begin{spacing}{1.1}
+	\begin{verbatim}
+	感谢你使用此模版！
+		
+	\end{verbatim}
+	\end{spacing}
+	
+	
+\end{document}
