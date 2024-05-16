@@ -25,5 +25,6 @@ Finally, thank you for using this template. Generally, there should be no major 
 
 ## 贡献者
 <a href="https://github.com/Lancelot-wy">
-  <img src="" />
+  <img src="https://avatars.githubusercontent.com/u/80385878?v=4" />
+  Lancelot-wy
 </a>
