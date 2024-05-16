@@ -22,3 +22,8 @@ I compiled it on a Mac platform, but theoretically, it should also work with Ove
 
 最后感谢食用该模版，一般不会有大问题（确信）。  
 Finally, thank you for using this template. Generally, there should be no major issues.
+
+## 贡献者
+<a href="https://github.com/Lancelot-wy">
+  <img src="" />
+</a>
