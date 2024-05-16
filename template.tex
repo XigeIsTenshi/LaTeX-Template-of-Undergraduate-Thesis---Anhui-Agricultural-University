@@ -14,6 +14,7 @@
 \usepackage{fancyhdr}
 \usepackage[section]{placeins}
 \usepackage{titlesec}
+\usepackage{titletoc}
 \usepackage{setspace}
 \linespread{1.375}
 \setmainfont{Times New Roman}
@@ -23,6 +24,15 @@
 		number=\heiti \chinese{section},
 	}
 }
+\usepackage{titletoc}
+\titlecontents{section}
+	[3cm]
+	{\bfseries \zihao{4}}
+	{\contentslabel{3cm}\hspace{-1cm}}
+	{\hspace{-3cm}}
+	{~\titlerule*[0.7pc]{$.$}~\contentspage}
+
+\renewcommand{\contentsname}{\fontsize{17pt}{\baselineskip}\heiti 目　　录}
 %这段注释是留给画流程图用的
 %\usetikzlibrary{shapes,arrows}
 %\tikzstyle{startstop} = [rectangle,rounded corners, minimum width=3cm,minimum height=1cm,text centered,draw=black, fill=red!10]
@@ -35,7 +45,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\fontsize{9pt}{\baselineskip} 安徽农业大学本科毕业论文（设计）} 
-\fancyfoot[C]{\thepage} 
+
 \geometry{left=3cm,right=2.5cm,top=3cm,bottom=2.5cm}
 %没有使用标题生成，有点小问题好像
 %\title{\textbf{\fontsize{36pt}{\baselineskip}本科生毕业论文（设计）\vspace{-2cm}}}
@@ -96,13 +106,16 @@
 	\thispagestyle{empty}
 	
 	\newpage
-	\begin{spacing}{1.2}
+	
+	\begin{spacing}{1.4}
 	%目录上面的行间距自己调整一下，尽量不要超过一页目录，否则要设置第二页页面格式为empty。
 	\tableofcontents
-	\end{spacing}
-	\thispagestyle{empty}
 	
+	\end{spacing}
+	\thispagestyle{fancy}
+	\fancyfoot{}
 	\newpage
+	\fancyfoot[C]{\thepage} 
 	\addcontentsline{toc}{section}{\heiti 摘　　要} \tolerance=500
 	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 摘　　要}}
 	\vspace{0.4cm}
