@@ -16,6 +16,7 @@
 \usepackage{titlesec}
 \usepackage{titletoc}
 \usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
 \linespread{1.375}
 \setmainfont{Times New Roman}
 \ctexset{
@@ -41,12 +42,12 @@
 %\tikzstyle{processsmall} = [rectangle,minimum width=3cm,minimum height=1cm,text centered,text width=3cm,draw=black, fill=blue!10]
 %\tikzstyle{decision} = [diamond,minimum width=3cm,minimum height=1cm,text centered, text width=3cm,draw=black, fill=orange!10]
 %\tikzstyle{arrow} = [thick,->,>=stealth]
-
+\geometry{left=3cm,right=2.5cm,top=3cm,bottom=2.5cm}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\fontsize{9pt}{\baselineskip} 安徽农业大学本科毕业论文（设计）} 
 
-\geometry{left=3cm,right=2.5cm,top=3cm,bottom=2.5cm}
+
 %没有使用标题生成，有点小问题好像
 %\title{\textbf{\fontsize{36pt}{\baselineskip}本科生毕业论文（设计）\vspace{-2cm}}}
 %\date{}
@@ -76,14 +77,14 @@
 			\cline{2-4}
 			\textbf{\heiti\zihao{4} 专　　业: }&\multicolumn{3}{c}{\zihao{4}计算机科学与技术}　\\
 			\cline{2-4}
-			\textbf{\heiti\zihao{4} 指导教师:}&\zihao{4}　佐巴扬　&\textbf{\heiti\zihao{4} 职　　称:}&\zihao{4}　传奇机长　\\
+			\textbf{\heiti\zihao{4} 指导教师:}&\zihao{4}　佐巴扬　&\textbf{\heiti\zihao{4} 职　　称:}&\zihao{4}　机　长　\\
 			\cline{2-2} \cline{4-4}
 		\end{tabular}
 	\end{table}
 
 	\vspace{4cm} 
 	\begin{table}[!h]
-		\renewcommand\arraystretch{1.8}
+		\renewcommand\arraystretch{2}
 		\setlength\tabcolsep{16pt}
 		\centering
 		\begin{tabular}{c}
@@ -120,7 +121,8 @@
 	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 摘　　要}}
 	\vspace{0.4cm}
 	%距离这个东西自己看着调整，我觉得这样调整后好看
-	111111
+	111111不中嘞哥。..点击目录或引用实现跳转哥。。
+
 	\vspace{0.2cm}
 	\par \textbf{\fontsize{14pt}{\baselineskip}\heiti 关键词:　}123
 	\setcounter{page}{1}
@@ -129,7 +131,7 @@
 	\addcontentsline{toc}{section}{ABSTRACT}\tolerance=500
 	\centerline{\textbf{\fontsize{16pt}{\baselineskip}ABSTRACT}}
 	\vspace{0.4cm}
-	111111英文摘要找GPT4帮你翻译
+	111111英文摘要找GPT4帮你翻译U know M3
 	\vspace{0.4cm}
 	\par \textbf{\fontsize{14pt}{\baselineskip}KEYWORDS:　}123
 	\newpage
@@ -145,25 +147,110 @@
 	\section{\fontsize{16pt}{\baselineskip}\heiti 理论基础}
 	
 	\subsection{\fontsize{14pt}{\baselineskip}\heiti 某理论基础}
-	1111111
+	\begin{equation}
+		\begin{array}{c}
+			\text {deg  = }\left\{\begin{array}{lc}
+				\arctan (\frac{y-y_{0}}{x-x_{0}}) & (x\ge 0,y\ge 0) \\
+				\arctan (\frac{y-y_{0}}{x-x_{0}})+\pi & (x<  0,y\ge 0) \\
+				\arctan (\frac{y-y_{0}}{x-x_{0}})+\pi & (x\ge 0,y<  0) \\
+				\arctan (\frac{y-y_{0}}{x-x_{0}})+2\pi & (x<  0,y<  0) \\
+			\end{array}\right.
+		\end{array}
+	\end{equation}
+	公式示例0  \ \  我也不知道什么公式
+
+	
+	\begin{table}[htp]
+		\renewcommand\arraystretch{1.6}
+		\setlength\tabcolsep{20pt}
+		\centering
+		\begin{center}
+			\fontsize{11pt}{\baselineskip}\heiti 表1  \ \  表格坐标示例 \par Table 1. \ \ Table axis template
+		\end{center} 
+		\vspace{-0.4cm} 
+		\begin{tabular}{cccc}
+			\toprule
+			起始边x坐标&起始边y坐标&终边x坐标&终边y坐标\\
+			\midrule
+			1&782&0&762\\
+			1&782&1&762\\
+			1&782&0&763\\
+			...&...&...&...\\
+			0&948&4&939\\
+			0&950&4&939\\
+			0&951&4&939\\
+			...&...&...&...\\
+			\bottomrule
+		\end{tabular}
+		\vspace{-0.4cm} 
+	\end{table}
 	
 	\subsubsection{\fontsize{13pt}{\baselineskip}\heiti 某理论基础详细介绍}
-	1111111
+	首先设置$(x_{0j},y_{0j}) = \{(x_i,y_i)|x_{0j}=\min x_i,y_{0j}=\min y_i\}$为初始点，并设置其三个扇区角度为：
+	$(\alpha ,\beta ,\gamma) = (0,\frac{2\pi}{3} ,\frac{4\pi}{3} )$ 。\textsuperscript{\cite{Ref1}}
+	\begin{equation}
+		\begin{array}{c}
+			\text {}\left\{\begin{array}{l}
+				y=\frac{a}{x^2}\\
+				O(y) = y^2\times x\\
+				z=(\frac{\max(x)}{x})^2
+			\end{array}\right.
+		\end{array}
+	\end{equation}
 	
 
 	\section{\fontsize{16pt}{\baselineskip}\heiti 技术介绍}
 	\subsection{\fontsize{14pt}{\baselineskip}\heiti 某技术详细介绍}
-	6666666
+	6666666\textsuperscript{\cite{Ref3}}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.8\textwidth]{pic/cti.pdf}
+		\label{tu}
+	\end{figure}
+	\vspace{-0.5cm}
+	\begin{center}
+		\fontsize{11pt}{\baselineskip}\heiti 图2 \ \  数据对比 \par Figure 2. \ \ Data compare
+	\end{center} 
 	
 	\section{\fontsize{16pt}{\baselineskip}\heiti 架构实现}
 	\subsection{\fontsize{14pt}{\baselineskip}\heiti 某架构详细实现}
-	网恋被骗8000块
+	网恋被骗8000块\textsuperscript{\cite{Ref2}}
+	\begin{equation}
+		\begin{array}{c}
+			\min cost  =10 \sum_{i=1} m_{i}+\sum_{i=1} n_{i}  \\
+			\text { s. t. }\left\{\begin{array}{l}
+				\sum_{i, j=1}^{n} W_{j} \times n_{i}+\sum_{i=1, j=1}^{m} W_{j} \times n_{i} \geq  \sum_{j=1}^{} W_{j} \times 90\% \\
+				m_{i}=0,1  \\ 
+				n_{i}=0,1  \\
+				\sqrt{\left(x-x_{0j}\right)^{2}-\left(y-y_{0j}\right)^{2}} \leq 30=H o n g(x, y) \\
+				\sqrt{\left(x-x_{0j}\right)^{2}-\left(y-y_{0j}\right)^{2}} \leq 10=\operatorname{Wei}(x, y)\\
+			\end{array}\right.
+		\end{array}
+	\end{equation}
+	什么垃圾规划
 
 	\section{\fontsize{16pt}{\baselineskip}\heiti 总结与展望}
 	哎，安农专给的word模版就是一坨答辩，按下tab的瞬间整个word都变了
 	
-	
-	
+	\begin{figure}[h]
+		\vspace{-0.1cm} 
+		\begin{minipage}[t]{0.45\linewidth}
+			\centering
+			\includegraphics[height=6cm,width=7cm]{pic/fknumscom-eps-converted-to.pdf}
+			
+			\begin{center}
+				\fontsize{11pt}{\baselineskip}\heiti 图3(a) \ \  哈里路大炫风！ \par Figure 3(a). \ \ Aolianfei Allin
+			\end{center} 
+		\end{minipage}
+		\begin{minipage}[t]{0.45\linewidth}
+			\centering
+			\includegraphics[height=6cm,width=7cm]{pic/fknumstime-eps-converted-to.pdf}
+			
+			\begin{center}
+				\fontsize{11pt}{\baselineskip}\heiti 图3(b)  \ \  我的图图呢  \par Figure 3(b). \ \ Where is 图图
+			\end{center} 
+		\end{minipage}
+	\end{figure}
 	\newpage
 	\addcontentsline{toc}{section}{\heiti 参考文献} \tolerance=500
 	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 参考文献}}
@@ -174,7 +261,10 @@
 		\vspace{-1cm} 
 		\bibitem{Ref1}
 		安徽农业大学信息与人工智能学院荣誉出品：D
-		
+		\bibitem{Ref2}
+		大香蕉一条大香蕉，你的感觉真的很奇妙～～～
+		\bibitem{Ref3}
+		这个入开桂了
 	\end{thebibliography}
 	
 	\newpage
