@@ -21,19 +21,27 @@
 \setmainfont{Times New Roman}
 \ctexset{
 	section={
-		name={\heiti 第,章},
-		number=\heiti \chinese{section},
+		format=\bfseries \zihao{3} \heiti \centering,
+		name={第,章},
+		number=\chinese{section},
+	},
+	subsection={
+		format=\bfseries \zihao{4} \heiti,
+	},
+	subsubsection={
+		format=\bfseries \zihao{-4},
 	}
 }
 \usepackage{titletoc}
 \titlecontents{section}
 	[3cm]
-	{\bfseries \zihao{4}}
-	{\contentslabel{3cm}\hspace{-1cm}}
+	{\zihao{-3}}
+	{\contentslabel{3cm}\hspace{-1.1cm}}
 	{\hspace{-3cm}}
 	{~\titlerule*[0.7pc]{$.$}~\contentspage}
 
-\renewcommand{\contentsname}{\fontsize{17pt}{\baselineskip}\heiti 目　　录}
+
+\renewcommand{\contentsname}{\fontsize{16pt}{\baselineskip}\heiti 目　　录}
 %这段注释是留给画流程图用的
 %\usetikzlibrary{shapes,arrows}
 %\tikzstyle{startstop} = [rectangle,rounded corners, minimum width=3cm,minimum height=1cm,text centered,draw=black, fill=red!10]
@@ -104,6 +112,7 @@
 	\vspace{6cm} \par \textbf{\fontsize{18pt}{\baselineskip}\heiti  安徽农业大学本科生毕业论文（设计）使用授权声明}
 	\vspace{1cm} \par 本学位论文作者完全了解学校有关保留、使用毕业论文（设计）的规定，同意学校保留并向国家有关部门或机构送交论文的复印件和电子版，允许论文被查阅和借阅。本人授权安徽农业大学教务处可以将本毕业论文（设计）的全部或部分内容编入有关数据库进行检索，可以采用影印、缩印或扫描等复制手段保存和汇编毕业论文（设计）。
 	\vspace{1cm} \par 论文作者签名：　　　　　　　　　　　导师签名：
+	\vspace{0.5cm} \par 日期：　　　　年　　月　　日　　　　日期：　　　　年　　月　　日
 	\thispagestyle{empty}
 	
 	\newpage
@@ -117,7 +126,7 @@
 	\fancyfoot{}
 	\newpage
 	\fancyfoot[C]{\thepage} 
-	\addcontentsline{toc}{section}{\heiti 摘　　要} \tolerance=500
+	\addcontentsline{toc}{section}{摘　　要} \tolerance=500
 	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 摘　　要}}
 	\vspace{0.4cm}
 	%距离这个东西自己看着调整，我觉得这样调整后好看
@@ -137,16 +146,16 @@
 	\newpage
 	\setcounter{page}{1}
 	\pagenumbering{arabic}
-	\section{\fontsize{16pt}{\baselineskip}\heiti 绪论}
-	\subsection{\fontsize{14pt}{\baselineskip}\heiti 研究背景及意义}
-	下面的东西自己修改，标题也是，我这是示例标题
+	\section{绪论}
+	\subsection{研究背景及意义}
+	下面的东西自己修改，标题也是，我这是示例标题\footnote{我也不知道为什么}
 	
-	\subsection{\fontsize{14pt}{\baselineskip}\heiti 论文的主要研究内容及其组织结构}
-	1111111
+	\subsection{论文的主要研究内容及其组织结构}
+	扣1111111送地狱火
 	
-	\section{\fontsize{16pt}{\baselineskip}\heiti 理论基础}
+	\section{理论基础}
 	
-	\subsection{\fontsize{14pt}{\baselineskip}\heiti 某理论基础}
+	\subsection{某理论基础}
 	\begin{equation}
 		\begin{array}{c}
 			\text {deg  = }\left\{\begin{array}{lc}
@@ -185,7 +194,7 @@
 		\vspace{-0.4cm} 
 	\end{table}
 	
-	\subsubsection{\fontsize{13pt}{\baselineskip}\heiti 某理论基础详细介绍}
+	\subsubsection{某理论基础详细介绍}
 	首先设置$(x_{0j},y_{0j}) = \{(x_i,y_i)|x_{0j}=\min x_i,y_{0j}=\min y_i\}$为初始点，并设置其三个扇区角度为：
 	$(\alpha ,\beta ,\gamma) = (0,\frac{2\pi}{3} ,\frac{4\pi}{3} )$ 。\textsuperscript{\cite{Ref1}}
 	\begin{equation}
@@ -199,8 +208,8 @@
 	\end{equation}
 	
 
-	\section{\fontsize{16pt}{\baselineskip}\heiti 技术介绍}
-	\subsection{\fontsize{14pt}{\baselineskip}\heiti 某技术详细介绍}
+	\section{技术介绍}
+	\subsection{某技术详细介绍}
 	6666666\textsuperscript{\cite{Ref3}}
 	\begin{figure}[!h]
 		\centering
@@ -212,8 +221,8 @@
 		\fontsize{11pt}{\baselineskip}\heiti 图2 \ \  数据对比 \par Figure 2. \ \ Data compare
 	\end{center} 
 	
-	\section{\fontsize{16pt}{\baselineskip}\heiti 架构实现}
-	\subsection{\fontsize{14pt}{\baselineskip}\heiti 某架构详细实现}
+	\section{架构实现}
+	\subsection{某架构详细实现}
 	网恋被骗8000块\textsuperscript{\cite{Ref2}}
 	\begin{equation}
 		\begin{array}{c}
@@ -229,7 +238,7 @@
 	\end{equation}
 	什么垃圾规划
 
-	\section{\fontsize{16pt}{\baselineskip}\heiti 总结与展望}
+	\section{总结与展望}
 	哎，安农专给的word模版就是一坨答辩，按下tab的瞬间整个word都变了
 	
 	\begin{figure}[h]
@@ -252,8 +261,9 @@
 		\end{minipage}
 	\end{figure}
 	\newpage
-	\addcontentsline{toc}{section}{\heiti 参考文献} \tolerance=500
+	\addcontentsline{toc}{section}{参考文献} \tolerance=500
 	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 参考文献}}
+	\small
 	%我这个参考文献的模版好像有点问题，但是也不是不能用
 	\vspace{-0.5cm} 
 	\renewcommand{\refname}{\leftline{Reference}}
@@ -266,15 +276,16 @@
 		\bibitem{Ref3}
 		这个入开桂了
 	\end{thebibliography}
-	
+
 	\newpage
-	\addcontentsline{toc}{section}{\heiti 致　　谢} \tolerance=500
+	\addcontentsline{toc}{section}{致　　谢} \tolerance=500
 	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 致　　谢}}
+	\normalsize
 	\vspace{0.4cm}
 	我测，不会真有人用农专发的唐氏模版吧
 	\newpage
 	\pagestyle{empty}
-	\addcontentsline{toc}{section}{\heiti 附　　录} \tolerance=500
+	\addcontentsline{toc}{section}{附　　录} \tolerance=500
 	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 附　　录}}
 	\begin{spacing}{1.1}
 	\begin{verbatim}
