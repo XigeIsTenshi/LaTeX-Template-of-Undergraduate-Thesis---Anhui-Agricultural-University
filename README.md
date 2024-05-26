@@ -8,6 +8,9 @@ This template is designed specifically for the undergraduate thesis at Anhui Agr
 本人LaTeX水平不精，文章中所有东西都是东拼西凑找到的，如有问题还请包涵理解。  
 My LaTeX skills are not expert-level; everything in the article is pieced together from various sources, so please be understanding if there are any issues.
 
+5.24更新：修复了一些板式的问题，对照毕业论文格式要求，重新一对一对比，现已基本没有什么问题。
+Update on May 24: Fixed some layout issues. After comparing with the graduation thesis format requirements one by one, there are now basically no problems.
+
 ---------------
 下面是使用的基本环境：  
 Below is the basic environment used:
