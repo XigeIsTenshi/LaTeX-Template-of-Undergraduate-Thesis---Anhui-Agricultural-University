@@ -17,7 +17,8 @@
 \usepackage{titletoc}
 \usepackage{setspace}
 \usepackage[hidelinks]{hyperref}
-\linespread{1.375}
+
+\linespread{1.385}
 \setmainfont{Times New Roman}
 \ctexset{
 	section={
@@ -39,7 +40,29 @@
 	{\hspace{-3cm}}
 	{~\titlerule*[0.7pc]{$.$}~\contentspage}
 
-
+\makeatletter
+% 重定义\bibitem
+\renewcommand{\@biblabel}[1]{\hspace{-1.2em}[#1]}
+\renewenvironment{thebibliography}[1]
+{\section*{\refname}%
+	\list{\@biblabel{\@arabic\c@enumiv}}%
+	{\settowidth\labelwidth{\@biblabel{#1}}%
+		\leftmargin\labelwidth
+		\advance\leftmargin\labelsep
+		\setlength\itemindent{3.2em}% 缩进调整
+		\@openbib@code
+		\usecounter{enumiv}%
+		\let\p@enumiv\@empty
+		\renewcommand\theenumiv{\@arabic\c@enumiv}}%
+	\sloppy
+	\clubpenalty4000
+	\@clubpenalty \clubpenalty
+	\widowpenalty4000%
+	\sfcode`\.\@m}
+{\def\@noitemerr
+	{\@latex@warning{Empty `thebibliography' environment}}%
+	\endlist}
+\makeatother
 \renewcommand{\contentsname}{\fontsize{16pt}{\baselineskip}\heiti 目　　录}
 %这段注释是留给画流程图用的
 %\usetikzlibrary{shapes,arrows}
@@ -129,7 +152,12 @@
 	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 摘　　要}}
 	\vspace{0.4cm}
 	%距离这个东西自己看着调整，我觉得这样调整后好看
-	111111不中嘞哥。..点击目录或引用实现跳转哥。。
+	要求简明确切、不加注释或评论地介绍论文研究背景、研究目的、主要材料和方法、研究结果、结论、科学意义或应用价值等。一般在400字左右。
+	摘要的内容用小四号宋体，行间距为固定值20磅。
+	\par 关键词是摘要的一部分，一般由3-5个相对独立的反映论文主体内容和涉及范围的词或词组组成（20字内），是论文分类和建立索引的依据，排在摘要正文部分下方。
+	\par 摘要内容后下空一行打印“关键词”三字（四号黑体），其后为关键词（小四号宋体），每一关键词之间用分号分开，最后一个关键词后不打标点符号。
+	
+	\par 111111不中嘞哥。..点击目录或引用实现跳转哥。。
 
 	\vspace{0.2cm}
 	\par \textbf{\fontsize{14pt}{\baselineskip}\heiti 关键词:　}123
@@ -137,7 +165,7 @@
 	\pagenumbering{Roman}
 	\newpage
 	\addcontentsline{toc}{section}{ABSTRACT}\tolerance=500
-	\centerline{\textbf{\Large ABSTRACT}}
+	\centerline{\textbf{\zihao{3}ABSTRACT}}
 	\vspace{0.4cm}
 	111111英文摘要找GPT4帮你翻译U know M3
 	\vspace{0.4cm}
@@ -259,39 +287,40 @@
 			\end{center} 
 		\end{minipage}
 	\end{figure}
+
 	\newpage
 	\addcontentsline{toc}{section}{参考文献} \tolerance=500
 	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 参考文献}}
 	\small
-	%我这个参考文献的模版好像有点问题，但是也不是不能用
-	\vspace{-0.5cm} 
-	\renewcommand{\refname}{\leftline{Reference}}
+	\vspace{-1.5cm} 
+	\renewcommand{\refname}{\leftline{　}}
 	\begin{thebibliography}{}
 		\vspace{-1cm} 
-		\bibitem{Ref1}
-		安徽农业大学信息与人工智能学院荣誉出品：D
+		\bibitem{Ref1} 
+		蒋有绪，郭泉水，马娟，等. 中国森林群落分类及其群落学特征[M]. 北京: 科学出版社，1998
 		\bibitem{Ref2}
 		大香蕉一条大香蕉，你的感觉真的很奇妙～～～
 		\bibitem{Ref3}
 		这个入开桂了
+		\bibitem{Ref4}
+		安徽农业大学信息与人工智能学院荣誉出品：D
 	\end{thebibliography}
 
+	\newpage
+	\addcontentsline{toc}{section}{附　　录} \tolerance=500
+	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 附　　录}}
+	\begin{spacing}{1.1}
+		\begin{verbatim}
+		感谢你使用此模版！
+		
+		\end{verbatim}
+	\end{spacing}
+	
 	\newpage
 	\addcontentsline{toc}{section}{致　　谢} \tolerance=500
 	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 致　　谢}}
 	\normalsize
 	\vspace{0.4cm}
 	我测，不会真有人用农专发的唐氏模版吧
-	\newpage
-	\pagestyle{empty}
-	\addcontentsline{toc}{section}{附　　录} \tolerance=500
-	\centerline{\textbf{\fontsize{16pt}{\baselineskip}\heiti 附　　录}}
-	\begin{spacing}{1.1}
-	\begin{verbatim}
-	感谢你使用此模版！
-		
-	\end{verbatim}
-	\end{spacing}
-	
 	
 \end{document}
